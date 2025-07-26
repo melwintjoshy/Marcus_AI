@@ -192,7 +192,7 @@ export default function App() {
     setYoutubeUrl(url);
 
     try {
-      const res = await fetch("http://localhost:8000/ask", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -226,7 +226,7 @@ export default function App() {
 
     try {
       const videoId = extractVideoId(youtubeUrl);
-      const res = await fetch("http://localhost:8000/ask", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ video_id: videoId, query: text }),
