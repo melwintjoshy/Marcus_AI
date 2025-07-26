@@ -47,13 +47,13 @@ def format_docs(retrieved_docs):
 # Transcript fetcher
 def get_transcript(video_id):
     try:
-        ytt_api = YouTubeTranscriptApi()
-        fetched_transcript = ytt_api.fetch(video_id)
-        return "".join(snippet.text for snippet in fetched_transcript)
+        transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
+        return "".join(chunk["text"] for chunk in transcript_list)
     except TranscriptsDisabled:
         raise HTTPException(status_code=400, detail="Transcripts are disabled for this video.")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error fetching transcript: {e}")
+
 
 @app.post("/ask")
 def ask_youtube_bot(request: QueryRequest):
