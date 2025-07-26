@@ -1,0 +1,19 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+youtube-transcript-api
+
+# LangChain core and community
+langchain
+langchain-core
+langchain-community
+
+# Google Generative AI support
+langchain-google-genai
+google-generativeai
+
+# FAISS for vector storage
+faiss-cpu  # or faiss-gpu if you’re using a CUDA-capable machine
+
+# CORS middleware is included in FastAPI
