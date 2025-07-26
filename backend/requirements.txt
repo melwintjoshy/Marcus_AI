@@ -2,7 +2,7 @@ fastapi
 uvicorn
 python-dotenv
 pydantic
-youtube-transcript-api=1.2.1
+youtube-transcript-api==1.2.1
 
 # LangChain core and community
 langchain
