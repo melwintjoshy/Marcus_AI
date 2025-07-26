@@ -1,19 +1,19 @@
 fastapi==0.116.1
 uvicorn==0.18.3
-python-dotenv==1.1.1
+python-dotenv
 pydantic==2.11.7
 
 # YouTube transcript API
 youtube-transcript-api==1.2.1
 
 # LangChain core and community
-langchain==0.3.26
-langchain-core==0.3.68
-langchain-community==0.3.27
+langchain
+langchain-core
+langchain-community
 
 # Google Generative AI support
 langchain-google-genai==2.1.7
 google-generativeai
 
 # FAISS for vector storage
-faiss-cpu==1.11.0.post1
+faiss-cpu
