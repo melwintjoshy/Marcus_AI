@@ -26,7 +26,7 @@ app = FastAPI(title="Chat with YouTube Videos Bot")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://marcus-ka7e7eosv-melwintjoshys-projects.vercel.app/"],  
+    allow_origins=["https://marcus-ai-469f.vercel.app/"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
