@@ -12,7 +12,7 @@ langchain-core
 langchain-community
 
 # Google Generative AI support
-langchain-google-genai==2.1.7
+langchain-google-genai
 google-generativeai
 
 # FAISS for vector storage
