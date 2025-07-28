@@ -66,8 +66,6 @@ The system fetches video transcripts, creates a vector store for semantic search
        ```bash
        uvicorn main:app --reload
        ```
-       *   `main:app`:  Assuming your main FastAPI application is defined in a file named `main.py` and the application instance is named `app`.  Adjust accordingly if your file/app name is different.
-       *   `--reload`: Enables automatic reloading of the server whenever the code changes (for development).
 
    b.  **Test the API:**  Open your web browser or use a tool like Postman to access the API documentation at `http://localhost:8000/docs` (assuming the server runs on port 8000).
 
