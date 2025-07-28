@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
+from youtube_transcript_api.proxies import WebshareProxyConfig
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -47,7 +48,12 @@ def format_docs(retrieved_docs):
 # Transcript fetcher
 def get_transcript(video_id):
     try:
-        ytt_api = YouTubeTranscriptApi()
+        ytt_api = YouTubeTranscriptApi(
+            proxy_config=WebshareProxyConfig(
+        proxy_username="qbcqnhxs",
+        proxy_password="b9fhsol5ynfj",
+    )
+        )
         fetched_transcript = ytt_api.fetch(video_id)
         return "".join(snippet.text for snippet in fetched_transcript)
     except TranscriptsDisabled:
