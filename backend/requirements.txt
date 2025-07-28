@@ -2,7 +2,7 @@ fastapi==0.116.1
 uvicorn==0.18.3
 python-dotenv
 pydantic==2.11.7
-
+cachetools
 # YouTube transcript API
 youtube-transcript-api==1.2.1
 
@@ -17,3 +17,6 @@ google-generativeai
 
 # FAISS for vector storage
 faiss-cpu
+fetched_transcript = ytt_api.fetch(video_id)
+        return "".join(snippet.text for snippet in fetched_transcript)
+
