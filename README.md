@@ -82,7 +82,7 @@ The system fetches video transcripts, creates a vector store for semantic search
 
 ### 3.  Using the System:
 
-   *   **Enter a YouTube video ID and your question** in the frontend interface.
+   *   **Enter a YouTube video URL and your question** in the frontend interface.
    *   The frontend will send a request to the `/ask` endpoint of the backend.
    *   The backend will fetch the transcript, create a vector store (if not cached), perform a semantic search, and use the LLM to generate an answer.
    *   The answer will be displayed in the frontend.
