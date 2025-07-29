@@ -121,8 +121,9 @@ def ask_youtube_bot(request: QueryRequest):
     prompt = PromptTemplate(
         template="""
         You are a helpful assistant designed to answer questions about a YouTube video based on its transcript.
-        Your goal is to provide concise and accurate answers derived ONLY from the provided context.
+        Your goal is detailed and accurate answers derived ONLY from the provided context.
         Do not use any external knowledge.
+        If asked for summary, list all the important topics mentioned in the video as bullet points.
         If the information to answer the question is not in the context, you must say "I don't have enough information from the transcript to answer that question."
 
         CONTEXT:
